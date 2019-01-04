@@ -1,27 +1,19 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from '@/pages/Home';
-import Cart from '@/pages/Cart';
-import Admin from '@/pages/Admin';
+import Vue from 'vue'
+import Router from 'vue-router'
+// import Hello from '@/components/Hello'
 
-Vue.use(Router);
+import HomeRoutes from './home'
+import AdminRoutes from './admin'
+import DetailsRoutes from './details'
+import CartRoutes from './cart'
+
+Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home,
-    },
-    {
-      path: '/admin',
-      name: 'Admin',
-      component: Admin,
-    },
-    {
-      path: '/Cart',
-      name: 'Cart',
-      component: Cart,
-    },
-  ],
-});
+    HomeRoutes,
+    AdminRoutes,
+    DetailsRoutes,
+    CartRoutes
+  ]
+})
